@@ -1,0 +1,451 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Times New Roman';
+
+}
+
+
+.containeer{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+/* ******************* navbar ****************** */
+.navbar input[type="checkbox"],
+.burger{
+    display: none;
+}
+.navbar{
+    box-shadow: 0px 5px 10px 0px rgb(31, 28, 28);
+    position: fixed;
+    width: 100%;
+    background-color: rgb(253, 255, 253);
+    color: black;
+    opacity: 0.85;
+    z-index: 999;
+}
+.navbar .containeer{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+.menu{
+    order: 2;
+}
+.logo{
+    order: 1;
+}
+.menu li{
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
+}
+.containeer ul{
+    display: flex;
+}
+.containeer h1{
+   font-weight: 500;
+   font-size: 1.5rem;
+}
+.navbar a{
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in;
+}
+.navbar a:hover{
+    color: #1a99ee;
+   
+}
+
+/* *****************************************************section top ********************* */
+#showcase{
+    height: 50vh;
+    background: linear-gradient(rgba(240,240,240,0.144),rgba(255,255,255,0.336)), url("pexels-aleksandar-pasaric-2341830.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* opacity: 0.8; */
+}
+.containers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.6rem;
+}
+#showcase .title{
+    font-size: 1.9rem;
+    text-transform: uppercase;
+}
+#showcase .btn{
+    display: inline-block;
+    padding: 1em 2.2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: rgb(44, 226, 90);
+    margin-top: 1em;
+    text-transform:uppercase ;
+    font-weight: 500;
+    color:#fff;
+}
+/* ****************************************about us************************************************ */
+#about{
+    padding: 50px 0px;
+    background: #c3c3e6;
+}
+.about-wrapper{
+   display: flex;
+   /* flex-wrap: wrap; */
+   flex-direction: row; 
+   max-width: 1200px;
+   width: 90%;
+   margin: auto;
+   background-color: #7e8f9b;
+  
+ 
+}
+#about h2{
+    font-size: 3.2rem;
+
+}
+#about .small{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #1a1414;
+    font-weight: 600;
+
+}
+
+.about-text{
+    flex: 1 1 400px;
+    padding: 30px;
+    margin: auto;
+    transform: translateX(-150%);
+    animation: abouttext 1s ease-in-out forwards;
+}
+
+@keyframes abouttext{
+    100%{
+     transform: translateX(0);
+    }
+}  
+.about-img{
+flex: 1 1 400px;
+padding: 30px;
+transform: translateX(150%);
+animation: aboutimage 1s ease-in-out forwards;
+/* border: 2px solid green; */
+
+}
+@keyframes aboutimage{
+    100%{
+     transform: translateX(0);
+    }
+}
+.about-img img{
+flex: 1 1 400px;
+display: block;
+ height: 300px;
+ max-width: 100%;
+ margin: auto;
+ object-fit: cover;
+
+ /* object-position: left; */
+}
+
+
+/* ***************************************************************section food*********************************** */
+#food{
+  background-color: rgb(228, 222, 222);
+  margin: auto;
+}
+#food h2{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: indigo;
+}
+.foodcontainer{
+    background-color: #dce3e7;
+    display: flex;
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+}
+.foodcontainer img{
+    display: block;
+    width: 100%;
+    margin: auto;
+    max-height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+.imagecontainer{
+    margin: 0 1rem;
+    position: relative;
+
+}
+.imgcontent{
+  position: absolute;
+transform: translate(32%,-196%);
+/* opacity: 0; */
+z-index: 2;
+text-align: center;
+transition: all;
+}
+.imgcontent h3{
+    color: #fff;
+    font-size: 3rem;
+    padding: 1rem;
+}
+.imgcontent a{
+    font-size: 1.2rem;
+
+}
+.imagecontainer::after{
+    position: absolute;
+    content: "";
+    background: rgb(173, 153, 153);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+   opacity: 0;
+ transform: scaleY(0);
+ transform-origin: 100% 100%;
+ transition: all 0.8s ease-in-out;
+   
+}
+.imagecontainer:hover::after{
+    opacity: 1;
+    transform: scaleY(1);
+
+}
+ .imagecontainer:hover.imgcontent{
+   opacity: 1;
+   
+ }
+.btn-primary{
+   
+    padding: 1em 2.2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: rgb(44, 226, 90);
+    margin-top: 1em;
+    text-transform:uppercase ;
+    font-weight: 500;
+    color:#fff; 
+}
+/* ***********************************food menu****************************************** */
+#foodmenu{
+    background: rgb(245, 245, 245);
+}
+
+.food-containers{
+    background-color: #fcfcfc;
+    /* display: flex;
+    flex-direction: column; */
+    max-width: 1200px;
+    width: 90%;
+    margin: auto; 
+}
+.foodmenu{
+    text-align: center;
+    color: #101416;
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.food-containers{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px 30px 0px;
+}
+.fooditem{
+    display: flex;
+    flex:  2 1 600px;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+}
+.fooddescription{
+    margin: auto 1.5rem;
+}
+.food-title{
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #444;
+}
+.fooddescription p{
+    font-size: 1.5rem;
+    color: #555;
+    font-weight: 500;
+
+}
+.fooddescription .price-food{
+    color: #117964;
+    font-weight: 700px;
+    
+}
+.fooditem img{
+    display: block;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+/* ************************************************************section testmonal ******************************************* */
+#testmonals{
+    background: rgb(250, 229, 229);
+    padding: 5rem 0rem;
+}
+.testmonal-title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #1a1414;
+}
+
+.testmonal-container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto; 
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.7rem;
+
+}
+.testmonal-box .fa-sttar{
+    color: chartreuse;
+    font-size:2rem;
+    font-weight: 500;
+}
+.testmonal-box .testmonal-txt{
+    margin: 1rem 0;
+    color: #444;
+}
+.testmonal-box{
+    text-align: center;
+    padding: 1rem;
+
+}
+.custmor-photo img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    margin: auto;
+    border-radius: 30px;
+}
+/* ***********************************dudee tjis is for contact section ******************************** */
+#contact{
+    background-color: bisque;
+    padding: 5rem 0;
+}
+.contact-container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;  
+    display: flex;
+    background:#fff;
+
+}
+.contact-image{
+    width: 50%;
+  
+}
+.contact-image img{
+    display: block;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    margin: auto;
+}
+.form-container{
+    padding: 1rem ;
+    width: 50%;
+    margin: auto;
+}
+.form-container input{
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid white;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 1rem;
+    color: #444;
+    font-weight: 500;
+}
+.form-container textarea{
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid ddd;
+    padding: 1rem 0;
+    margin: 1.2rem;
+}
+.form-container h2{
+    font-size: 3rem;
+    font-weight: 400;
+    color: #444;
+    margin-bottom: 1rem;
+}
+.form-container a{
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+}
+/* ***********************footer ********************************* */
+#footer h2{
+    text-align: center;
+    font-size: 2rem;
+    padding: 3rem;
+    font-weight: 500;
+    color: #fff;
+    background: #000;
+}
+/* ###########################################media qurieeeee************************************** */
+@media (max-width:700px) {
+    .navbar{
+        opacity: 0.95;
+
+    }
+    .navbar input[type="checkbox"],
+.burger{
+    display: block;
+}
+.foodcontainer{
+   flex-direction: column;
+}
+.contact-container{
+    flex-direction: column;
+}
+.contact-image{
+    width: 100%;
+}
+.contact-image img{
+    width: 100%;
+}
+.form-container a{
+    display: none;
+}
+}
